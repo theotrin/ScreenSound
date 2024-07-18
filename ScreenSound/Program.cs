@@ -1,22 +1,10 @@
-﻿Banda vacations = new Banda("Vacations");
+﻿Episodio episodio1 = new Episodio(60, 1, "Programação orientada a objetos");
+episodio1.AdcionarConvidados("Gustavo Guanabera");
 
-Musica home = new Musica(vacations, "Home")
-{
-    Duracao = 2.27,
-    Disponivel = true,
-};
+Console.WriteLine(episodio1.Resumo);
 
-Musica young = new Musica(vacations, "Young")
-{
-    Duracao = 3.11,
-    Disponivel = true,
-};
+Podcast podcast = new Podcast("Theo", "True Programing");
 
-Album AlbumVacations = new Album("Vibes and Days");
-AlbumVacations.AdicionarMusica(young);
-AlbumVacations.AdicionarMusica(home);
+podcast.AdcionarEpisodio(episodio1);
 
-
-vacations.AdcionarAlbum(AlbumVacations);
-vacations.ExibirDiscografia();
-AlbumVacations.ExibirMusicas();
+podcast.ExibirDetalhes();
